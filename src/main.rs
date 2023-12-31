@@ -6,16 +6,20 @@ use tray_icon::{
     menu::{Menu, MenuEvent, MenuItem, MenuId},
     TrayIconBuilder,
 };
+use std::fs;
 use std::os::windows::process::CommandExt;
 use winit::event_loop::{ControlFlow, EventLoopBuilder};
 use image;
 
 fn main() {
+    if !fs::metadata("./data/cache").is_ok() {
+        fs::create_dir("./data/cache").unwrap();
+    }
     const CREATE_NO_WINDOW: u32 = 0x08000000;
     let icon = load_icon(std::path::Path::new("./data/tools/logo.png"));
     let event_loop = EventLoopBuilder::new().build().unwrap();
     let tray_menu = Menu::new();
-
+    
     let _ = tray_menu.append_items(&[
         &MenuItem::new("quit", true, None)
     ]);
