@@ -1,7 +1,7 @@
 [package]
 name = "lofi_tray"
 version = "1.0.0"
-authors = ["Anton"]
+authors = ["Geml"]
 description = "youtube lofi girl stream"
 repository = "https://github.com/Anton-Euro/lofi-tray"
 license = "MIT"
