@@ -2,7 +2,7 @@
 name = "lofi_tray"
 version = "1.0.0"
 authors = ["Geml"]
-description = "youtube lofi girl stream"
+description = "audio player from a lofi girl youtube live stream"
 repository = "https://github.com/Anton-Euro/lofi-tray"
 license = "MIT"
 edition = "2021"
